@@ -8,16 +8,18 @@ switch (host) {
     case "www.instagram.com":
         switch(ps) {
             case "p":
-                try {
-                var URL = window.location.pathname;
-                var insd = "http://insd.ga"+URL;
-                window.open(insd, '_blank');
-                }
-                finally{
-                        var videoins = document.getElementsByClassName("_l6uaz")[0].src;
-                        window.open(videoins, '_blank');
-                }
-            break;
+                
+                    var linkvid = document.getElementsByClassName("_l6uaz")[0];
+                    if(linkvid == undefined){
+                    var length_photo = document.getElementsByClassName("_2di5p").length;
+                    var linkins = length_photo - 1;
+                    var link_photo = document.getElementsByClassName("_2di5p")[linkins].currentSrc;
+                    window.open(link_photo, '_blank');
+                        
+                    }else{
+                        var linkvid = linkvid.currentSrc;
+                        window.open(linkvid, '_blank');
+                    }
             case "stories":
                     var photo = document.getElementsByClassName('_ntjhp')[0].src;
                 if(photo == null){
@@ -83,7 +85,3 @@ switch (host) {
                     }
         break;
 }
-    
-    
-    
-        
