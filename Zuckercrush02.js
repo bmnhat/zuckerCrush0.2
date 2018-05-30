@@ -8,7 +8,6 @@ switch (host) {
     case "www.instagram.com":
         switch(ps) {
             case "p":
-                
                     var linkvid = document.getElementsByClassName("_l6uaz")[0];
                     if(linkvid == undefined){
                     var length_photo = document.getElementsByClassName("_2di5p").length;
@@ -32,8 +31,7 @@ switch (host) {
             break;
             default:
                 window.open("http://insd.ga", '_blank');
-                   
-        }
+            }
     break;
     case "www.facebook.com":
                 var your_url = document.getElementsByClassName("_2s25")[0].href;
